@@ -46,7 +46,9 @@ class Deck {
             valueLookup[i],
             suitLookup[j],
             fullValueLookup[i],
-            fullSuitLookup[j]
+            fullSuitLookup[j],
+            i,
+            j
           )
         );
       }
