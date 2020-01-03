@@ -1,0 +1,48 @@
+* {
+  margin: 0px;
+}
+
+body {
+  background-color: blue;
+}
+
+.parent {
+  --main-bg-color: rgb(31, 120, 76);
+  --left-right-margin: 10px;
+  margin: 10px;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.cards {
+  /* top right bottom left */
+  margin: 20vh var(--left-right-margin) 0px var(--left-right-margin);
+  height: 30vh;
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.holds {
+  margin: 0vh var(--left-right-margin) 0px var(--left-right-margin);
+  height: 5vh;
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: space-around;
+  color: yellow;
+}
+
+.hold_buttons {
+  margin: 0vh var(--left-right-margin) 0px var(--left-right-margin);
+  height: 5vh;
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  height: 200px;
+  width: 120px;
+}
