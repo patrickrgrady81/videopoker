@@ -16,9 +16,10 @@ class Game {
   }
 
   playDefault() {
-    deck.create();
-    deck.shuffle();
-    player.deal(deck, 5);
-    player.display();
+    this.deck.create();
+    this.deck.shuffle();
+    this.player.deal(deck, 5);
+    this.player.display();
+    let evaluate = new Evaluate(this.player.hand);
   }
 }
