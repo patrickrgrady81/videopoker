@@ -11,11 +11,10 @@ class Player {
 
   display() {
     //Show the players cards in the DOM
+    let imgSource = "./img/cards/";
     let domCards = document.getElementsByClassName("imgCard");
     for (let i = 0; i < this.hand.length; i++) {
-      let v = this.hand[i].value;
-      let s = this.hand[i].suit[0];
-      domCards[i].src = "./img/cards/" + v + s + ".png";
+      domCards[i].src = imgSource + this.hand[i].myImage;
     }
   }
 }

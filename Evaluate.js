@@ -8,7 +8,12 @@ class Evaluate {
   //
 
   constructor(hand) {
-    console.log(hand);
-    console.log("I have no Idea!");
+    this.hand = hand;
+  }
+  run() {
+    //sort the cards
+
+    console.log(this.hand);
+    return "I have no idea about this.. sorry you should program more!";
   }
 }

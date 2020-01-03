@@ -5,7 +5,7 @@ class Deck {
 
   create() {
     // var cards = [];
-    var valueLookup = [
+    let valueLookup = [
       "A",
       "2",
       "3",
@@ -20,12 +20,35 @@ class Deck {
       "Q",
       "K"
     ];
-    var suitLookup = ["C", "S", "H", "D"];
+    let fullValueLookup = [
+      "Ace",
+      "Two",
+      "Three",
+      "Four",
+      "Five",
+      "Six",
+      "Seven",
+      "Eight",
+      "Nine",
+      "Ten",
+      "Jack",
+      "Qeen",
+      "King"
+    ];
+    let suitLookup = ["C", "S", "H", "D"];
+    let fullSuitLookup = ["Clubs", "Spades", "Hearts", "Diamonds"];
     //create a deck of 52 Cards from lookups
 
     for (let i = 0; i < valueLookup.length; i++) {
       for (let j = 0; j < suitLookup.length; j++) {
-        this.cards.push(new Card(valueLookup[i], suitLookup[j]));
+        this.cards.push(
+          new Card(
+            valueLookup[i],
+            suitLookup[j],
+            fullValueLookup[i],
+            fullSuitLookup[j]
+          )
+        );
       }
     }
   }
