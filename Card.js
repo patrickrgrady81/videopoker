@@ -1,5 +1,5 @@
 class Card {
-  constructor(value, suit, fullValue, fullSuit, intValue, intSuit) {
+  constructor(value, suit, fullValue, fullSuit, intValue, intSuit, val) {
     //Create a card that has a value and a suit
     // CALL THIS SOMETHING ELSE!  value = all cards added together.. ***NEED TO ADD A VALUE TO EACH CARD***!
     this.value = value;

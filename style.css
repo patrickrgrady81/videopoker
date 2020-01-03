@@ -7,7 +7,7 @@ body {
 }
 
 .parent {
-  --main-bg-color: rgb(31, 120, 76);
+  --main-bg-color: rgb(70, 107, 89);
   --left-right-margin: 10px;
   margin: 10px;
   height: 100vh;
