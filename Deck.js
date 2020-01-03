@@ -53,4 +53,8 @@ class Deck {
       }
     }
   }
+
+  deal() {
+    return this.cards.shift();
+  }
 }

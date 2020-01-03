@@ -1,8 +1,7 @@
 deck = new Deck();
+player = new Player();
 deck.create();
 deck.shuffle();
-deck.print();
-
-// for (var i = 0; i < 52; i++) {
-//   console.log(deck.cards[i].value + deck.cards[i].suit);
-// }
+//deck.print();
+player.deal(deck, 5);
+player.display();
