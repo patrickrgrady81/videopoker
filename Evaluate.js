@@ -27,6 +27,18 @@ class Evaluate {
 
   run() {
     //  sort the cards by value lowest to highest
+    console.log(this.hand);
+    var sorted = this.hand.slice().sort((a, b) => {
+      //console.log(this.hand[i]);
+      console.log(a.intValue);
+      console.log(b.intValue);
+
+      if ((a.intValue - b.intValue) < 0) return -1;
+      if ((a.intValue - b.intValue) > 0) return 1;
+      return 0;
+
+    });
+    console.log(sorted);
 
     //  we have to find a possible outcome from possibleLookup = total
     //
@@ -118,8 +130,6 @@ class Evaluate {
     //  ok?
     //
     //
-
-    console.log(this.hand);
     // BECAUSE I DON'T KNOW WHAT TO DO YET SO..
     // I LOVE YOU MAX
     // I LOVE YOU CONNER

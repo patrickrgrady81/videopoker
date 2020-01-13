@@ -3,7 +3,7 @@ class Card {
     //Create a card that has a value and a suit
     // CALL THIS SOMETHING ELSE!  value = all cards added together.. ***NEED TO ADD A VALUE TO EACH CARD***!
     this.value = value;
-    this.intValue = null;
+    this.intValue = intValue;
     this.suit = suit;
     this.intSuit = null;
     this.fullValue = fullValue;
