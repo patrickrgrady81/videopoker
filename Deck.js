@@ -32,7 +32,7 @@ class Deck {
       "Nine",
       "Ten",
       "Jack",
-      "Qeen",
+      "Queen",
       "King"
     ];
     let suitLookup = ["C", "S", "H", "D"];
@@ -53,8 +53,6 @@ class Deck {
           j
         )
         this.cards.push(card);
-        console.log(card);
-        console.log(valLookup[i]);
       }
     }
   }

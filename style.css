@@ -47,3 +47,8 @@ body {
   height: 200px;
   width: 120px;
 }
+
+#handValue, #handHighCard{
+  font-size: 44px;
+  margin-top: 20px;  
+}

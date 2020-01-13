@@ -26,13 +26,12 @@ class Evaluate {
   }
 
   run() {
+    let handStrength;
+    let highCard;
+
     //  sort the cards by value lowest to highest
     console.log(this.hand);
     var sorted = this.hand.slice().sort((a, b) => {
-      //console.log(this.hand[i]);
-      console.log(a.intValue);
-      console.log(b.intValue);
-
       if ((a.intValue - b.intValue) < 0) return -1;
       if ((a.intValue - b.intValue) > 0) return 1;
       return 0;
@@ -113,10 +112,25 @@ class Evaluate {
     //  1pair
     //  ---------
     //
-    //  if 1,2
+    // for (let i = 0; i < this.hand.length - 1; i++) {
+    //   for (let j = 1; j < this.hand.length - 2; j++) {
+    //     console.log("looking for pairs...");
+    //     console.log("i = " + i);
+    //     if (this.hand[i].intValue == this.hand[j].intValue) {
+    //       console.log("Found a pair of " + this.hand[i].fullValue);
+    //       handStrength = "Pair of " + this.hand[i].fullValue + "s";
+    //     }
+    //   }
+    // }
+    for (let i = 0; i < this.hand.length - 1; i++) {
+      if (sorted[i].intValue == sorted[i + 1].intValue) {
+        handStrength = "Pair of " + sorted[i].fullValue + "s";
+      }
+    }
+    //  if 0,1
+    //  or 1,2
     //  or 2,3
     //  or 3,4
-    //  or 4,5
     //
     //
     //  High Card
@@ -126,6 +140,13 @@ class Evaluate {
     //  Lets' go bottome up please..
     //  High card then find others..
     // when we find them we can move on to the next.
+    if (sorted[0].intValue == 1) {
+      highCard = sorted[0]
+    }
+    else {
+      highCard = sorted[this.hand.length - 1];
+    }
+    console.log(highCard);
 
     //  ok?
     //
@@ -135,6 +156,17 @@ class Evaluate {
     // I LOVE YOU CONNER
     // other than that!! HAVE FUN
 
-    return "I have no idea about this.. sorry you should program more!";
+
+
+
+    //Show What the player has in the page
+    let noteHighCard;
+    let hand;
+    noteHighCard = document.getElementById("handValue");
+    noteHighCard.innerText = "High Card: " + highCard.fullValue;
+    hand = document.getElementById("handHighCard");
+    hand.innerText = handStrength;
+    console.log(highCard.printFull());
+    return "Getting Closer, but not really, still a lot of work to do!";
   }
 }

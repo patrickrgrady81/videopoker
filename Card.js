@@ -12,6 +12,7 @@ class Card {
   }
 
   printFull(v, s) {
-    console.log(this.fullValue + " of " + this.fullSuit);
+    return this.fullValue + " of " + this.fullSuit
+    //console.log();
   }
 }
