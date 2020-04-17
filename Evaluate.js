@@ -162,9 +162,9 @@ class Evaluate {
     //Show What the player has in the page
     let noteHighCard;
     let hand;
-    noteHighCard = document.getElementById("handValue");
+    noteHighCard = document.getElementById("handHighCard");
     noteHighCard.innerText = "High Card: " + highCard.fullValue;
-    hand = document.getElementById("handHighCard");
+    hand = document.getElementById("handValue");
     hand.innerText = handStrength;
     console.log(highCard.printFull());
     return "Getting Closer, but not really, still a lot of work to do!";
